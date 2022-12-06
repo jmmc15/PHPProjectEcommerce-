@@ -3,7 +3,7 @@
   session_start();
   require_once('db.php');
 //   include('functions/products.php');
-  include('functions/functions.php');
+  require_once('functions/functions.php');
 
 ?>
 
