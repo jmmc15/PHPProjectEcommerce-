@@ -107,10 +107,20 @@ class Database{
 
 
 
-$host = "localhost";
-$username = "root";
-$password = "123456";
-$db = "ecom_store";
+
+//Get Heroku ClearDB connection information
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"],1);
+$active_group = 'default';
+$query_builder = TRUE;
+
+$host = $cleardb_server;
+$username = $cleardb_username;
+$password = $cleardb_password;
+$db = $cleardb_db;
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
