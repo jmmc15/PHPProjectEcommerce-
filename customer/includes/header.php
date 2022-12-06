@@ -209,28 +209,3 @@
       </div> <!-- navbar-collapse collapse Finish -->
     </div> <!-- container Finish -->
   </div> <!-- navbar navbar-default Finish -->
-
-  <!-- 
-  <div class='col-md-4 col-sm-6 center-responsive'>
-    <div class='product'>
-      <a href='details.php?pro_id=$pro_id'> 
-        <img class='img-responsive' src='admin_area/product_images/$pro_img1'>
-      </a>
-      <div class='text'>
-        <h3>
-          <a href='details.php?pro_id=$pro_id'> $pro_title </a>
-        </h3>
-        <p class='price'>
-          CA$$pro_price
-        </p>
-        <p class='button'>
-          <a class='btn btn-default' href='details.php?pro_id=$pro_id'>
-            View Details
-          </a>
-          <a class='btn btn-primary' href='details.php?pro_id=$pro_id'>
-            <i class='fa fa-shopping-cart'></i> Add to Cart
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>-->
