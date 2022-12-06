@@ -1,10 +1,20 @@
 <?php
 require_once("config/config.php");
 
-$host = "localhost";
-$username = "root";
-$password = "123456";
-$db = "ecom_store";
+// $host = "localhost";
+// $username = "root";
+// $password = "123456";
+// $db = "ecom_store";
+
+$cleardb_server = "us-cdbr-east-06.cleardb.net";
+$cleardb_username = "b2ae6d05b1d12e";
+$cleardb_password = "9571994f";
+$cleardb_db = "heroku_263a939ba644f5a";
+
+$host = $cleardb_server;
+$username = $cleardb_username;
+$password = $cleardb_password;
+$db = $cleardb_db;
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
