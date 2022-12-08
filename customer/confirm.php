@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
-    <title>M-Dev Store</title>
+    <title>Clothing Store</title>
 </head>
 <body>
  

@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <script src="js/scripts.js"></script>
-    <title>M-Dev Store</title>
+    <title>Clothing Store</title>
 </head>
 <body>
  
