@@ -41,7 +41,6 @@ try {
 
 <?php
 
- // Function from tutorial
  function getRealIPUser () {
 
     switch(true){

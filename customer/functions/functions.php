@@ -89,9 +89,7 @@ function addCart() {
 
         $check_product = "select count(*) from cart where ip_add = '$ip_add' AND p_id = '$p_id'";
         $run_check = $pdo->query($check_product);
-
-        // $check_product = new Cart();
-        // $run_check = $check_product->checkProduct($ip_add,$p_id);
+        
 
         if($row_check=$run_check->fetchColumn()) {
 
