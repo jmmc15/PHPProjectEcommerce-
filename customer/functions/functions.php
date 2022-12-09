@@ -43,7 +43,6 @@ try {
 
 <?php
 
- // Function from tutorial
  function getRealIPUser () {
 
     switch(true){
@@ -101,9 +100,6 @@ function addCart() {
 
         } else {
 
-            // $insert_to_cart = "insert into cart (p_id, ip_add, qty, size) values (?,?,?,?)";
-            // $conn->prepare($insert_to_cart)->execute([$p_id, $ip_add , $product_qty, $product_size]);
-
             $insert_to_cart = new Cart();
             $insert_to_cart->setP_id($p_id);
             $insert_to_cart->setIp_add($ip_add);
@@ -126,9 +122,6 @@ function getPro(){
     $get_products = "select * from products order by 1 desc limit 0,8";
 
     $run_products = $pdo->query($get_products);
-
-    // $get_products = new Products();
-    // $run_products = $get_products->getProducts();
 
 
 
@@ -189,8 +182,6 @@ function getPCategories(){
     $get_p_categories = "select * from product_categories";
     $run_p_categories = $pdo->query($get_p_categories);
 
-    // $get_p_categories = new ProductCategory();
-    // $run_p_categories = $get_p_categories->getProductCategories();
 
     while($row_p_categories = $run_p_categories->fetch()) {
 
@@ -217,8 +208,6 @@ function getCategories() {
     $get_categories = "select * from categories;";
     $run_categories = $pdo->query($get_categories);
 
-    // $get_categories = new Categories();
-    // $run_categories = $get_categories->selectAllCategories();
 
     while($row_categories=$run_categories->fetch()) {
 
@@ -251,20 +240,12 @@ function displayCategories() {
         $run_p_cat = $pdo->query($get_p_cat);
         $row_p_cat = $run_p_cat->fetch();
 
-        // $get_p_cat = new ProductCategory();
-        // $run_p_cat = $get_p_cat->getProdCategoryById($p_cat_id);
-        // $row_p_cat = $run_p_cat->fetch();
-
         $p_cat_title = $row_p_cat['p_cat_title'];
         $p_cat_desc = $row_p_cat['p_cat_desc'];
 
         $query_count_products = "select count(*) from products where p_cat_id = '$p_cat_id'";
         $run_products = $pdo->query($query_count_products);
         $get_count_products = $run_products->fetchColumn();
-
-        // $query_count_products = new Products();
-        // $run_products = $query_count_products->countProductByPCatId($p_cat_id);
-        // $get_count_products = $run_products->fetchColumn();
 
         if($get_count_products == 0) {
 
